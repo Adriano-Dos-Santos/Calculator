@@ -80,7 +80,7 @@ body {
   color: white;
 }
 
-main {
+.main {
   width: 600px;
   font-size: 2rem;
   border: 2px solid black;
@@ -88,7 +88,7 @@ main {
   flex-direction: column;
   border-radius: 10px;
 }
-.visorContainer {
+.main__visorContainer {
   text-align: right;
   border: 2px solid black;
   flex-basis: 20%;
@@ -96,7 +96,11 @@ main {
   padding-right: 3rem;
 }
 
-.buttonsContainer {
+.visorContainer__historyContent {
+ font-size: 1.5rem;
+}
+
+.main__valueAndOperatorContainer {
   border: 2px solid black;
   flex-basis: 70%;
   display: flex;
@@ -108,32 +112,67 @@ main {
 
 }
 
-.numbers {
+.main__values {
+  flex-basis: 55%;
+  justify-content: space-between;
+                       "main main main"
+}
+
+.main__values__gridAreaContainer {
   display: grid;
   grid-template-columns: 70px 70px 70px;
-  flex-basis: 50%;
   justify-content: space-evenly;
+
 
 }
 
-.numbers > .button {
-  background-color: rgb(20, 20, 20);
+.main__values__lowerArea {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
+
+}
+
+.zero {
+   background-color: rgb(40,40,40);
+   flex-basis: 68%;
+   border-radius: 50rem;
+   padding: 0.2rem 6rem 0.2rem 0;
+
+}
+
+.comma {
+   background-color: rgb(40,40,40);
+   width: 85px;
+   height: 85px;
+   line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.main__values__gridAreaContainer > .button {
+  background-color: rgb(40, 40, 40);
   border-radius: 50%;
   margin: 0.5rem 0 0.5rem 0;
+  cursor: pointer;
 }
 
-.operators {
+
+.main__operators {
   display: grid;
   grid-template-columns: 70px 70px;
-  flex-basis: 50%;
+  flex-basis: 45%;
   justify-content: space-evenly;
 
 
 }
-.operators > .button {
+.main__operators > .button {
   background-color: rgb(200, 130, 10);
   border-radius: 50%;
   margin: 0.5rem 0 0.5rem 0;
+  cursor: pointer;
+}
 }
 
 
